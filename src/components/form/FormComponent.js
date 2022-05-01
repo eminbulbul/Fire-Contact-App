@@ -14,7 +14,7 @@ import {
 import { AccountCircle } from "@mui/icons-material";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
-const FormComponent = ({ info, setInfo }) => {
+const FormComponent = ({ info, setInfo, handleFormSubmit }) => {
   const handleChange = (e) => {
     e.preventDefault();
     // const name=e.target.name
@@ -34,12 +34,12 @@ const FormComponent = ({ info, setInfo }) => {
       <p className="contact-header">
         <div>
           <a
-            href="https://github.com/clarusway"
+            href="https://github.com/eminbulbul/Fire-Contact-App"
             className="design"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <code>{"<Clarusway/> "}</code>
+            <code>{"<M.Emin/> "}</code>
           </a>
         </div>
         <span className="design header">design</span>
@@ -47,7 +47,7 @@ const FormComponent = ({ info, setInfo }) => {
       <h2 className="contact-header">Add Contact</h2>
 
       <Box style={{ backgroundColor: "white", padding: "20px" }}>
-        <form>
+        <form onSubmit={handleFormSubmit}>
           <Stack spacing={3} direction="column">
             <TextField
               variant="outlined"
